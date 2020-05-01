@@ -1,7 +1,7 @@
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/repositories/IStudentRepository.java
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/DemoApplication.java
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/models/Student.java
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/util/DatabaseConnectionManager.java
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/repositories/InMemoryStudentRepositoryImpl.java
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/repositories/StudentRepositoryImpl.java
-/Users/hm/Desktop/IntelliJ/IdeaProjects/StudentAdminDemo.git/src/main/java/com/example/demo/controllers/StudentController.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\DemoApplication.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\controllers\StudentController.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\repositories\IStudentRepository.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\repositories\StudentRepositoryImpl.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\repositories\InMemoryStudentRepositoryImpl.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\util\DatabaseConnectionManager.java
+C:\Users\dk98\Desktop\miniproject\StudentAdminDemo.git\src\main\java\com\example\demo\models\Student.java

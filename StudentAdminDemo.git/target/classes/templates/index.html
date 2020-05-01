@@ -24,9 +24,35 @@
                 <th th:text="${student.firstName}"></th>
                 <th th:text="${student.lastName}"></th>
                 <th th:text="${student.enrollmentDate}"></th>
-                <td><a th:href="@{/student(id=${student.id})}"><button> Details</a></button></td>
+                <td><a th:href="@{/student(id=${student.id})}" ><button class="knap" id="grøn">Details</button></a>
+                    <a th:href="@{/student(id=${student.id})}" ><button class="knap" id="blå">Edit</button></a>
+                    <a th:href="@{/student(id=${student.id})}" ><button class="knap" id="råd">Delete</button></a></td>
             </tr>
+                <style>
 
+                    .knap{
+                        padding: 7px;
+                        font-size: 12px;
+                        border-radius: 5px;
+                        border: 0px solid white;
+                        color: white;
+                    }
+
+                    #grøn{
+                        background-color: #4CAF50;
+                    }
+                    #blå{
+                        background-color: #008CBA;
+                    }
+                    #råd{
+                        background-color: #f44336;
+                    }
+
+                </style>
+
+<style>
+
+</style>
             <!--
             <tr>
                 <td>Jill</td>
