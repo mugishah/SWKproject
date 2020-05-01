@@ -21,7 +21,7 @@ public class Student
         this.cpr = cpr;
     }
 
-    public void fuckMo(){
+    public void testMethod(){
         String fuck;
         int Mangegange;
     }
