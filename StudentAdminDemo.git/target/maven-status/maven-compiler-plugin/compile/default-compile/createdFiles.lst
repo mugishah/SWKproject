@@ -1,7 +1,7 @@
-com\example\demo\models\Student.class
-com\example\demo\DemoApplication.class
-com\example\demo\util\DatabaseConnectionManager.class
-com\example\demo\repositories\IStudentRepository.class
-com\example\demo\repositories\StudentRepositoryImpl.class
-com\example\demo\controllers\StudentController.class
-com\example\demo\repositories\InMemoryStudentRepositoryImpl.class
+com/example/demo/DemoApplication.class
+com/example/demo/util/DatabaseConnectionManager.class
+com/example/demo/controllers/StudentController.class
+com/example/demo/repositories/IStudentRepository.class
+com/example/demo/repositories/InMemoryStudentRepositoryImpl.class
+com/example/demo/repositories/StudentRepositoryImpl.class
+com/example/demo/models/Student.class

@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class StudentController
-{
+public class StudentController {
 
     private IStudentRepository studentRepository;
 

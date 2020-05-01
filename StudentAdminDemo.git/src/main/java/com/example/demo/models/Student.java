@@ -13,8 +13,7 @@ public class Student
     public Date enrollmentDate;
     public String cpr;
 
-    public Student(int id, String firstName, String lastName, Date enrollmentDate, String cpr)
-    {
+    public Student(int id, String firstName, String lastName, Date enrollmentDate, String cpr) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,6 +23,7 @@ public class Student
 
     public void fuckMo(){
         String fuck;
+        int Mangegange;
     }
     public Student() {}
 
