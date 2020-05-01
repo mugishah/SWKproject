@@ -22,6 +22,9 @@ public class Student
         this.cpr = cpr;
     }
 
+    public void fuckMo(){
+        String fuck;
+    }
     public Student() {}
 
     public int getId() {
