@@ -8,6 +8,20 @@
 </head>
 <body>
     <!-- TODO: MENU -->
+    <header>
+        <div class="container">
+            <h1 class="logo"></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="/"><img id="logo" src="/img/kea.png"></a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Student</a></li>
+                    <li><a href="#">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <!-- TODO: Table of students -->
     <div class="container">
         <h1>Student administration</h1>
@@ -28,30 +42,7 @@
                     <a th:href="@{/student(id=${student.id})}" ><button class="knap" id="blå">Edit</button></a>
                     <a th:href="@{/student(id=${student.id})}" ><button class="knap" id="råd">Delete</button></a></td>
             </tr>
-                <style>
 
-                    .knap{
-                        padding: 7px;
-                        font-size: 12px;
-                        border-radius: 5px;
-                        border: 0px solid white;
-                        color: white;
-                    }
-
-                    #grøn{
-                        background-color: #4CAF50;
-                    }
-                    #blå{
-                        background-color: #008CBA;
-                    }
-                    #råd{
-                        background-color: #f44336;
-                    }
-
-                </style>
-<style>
-
-</style>
         </table>
     </div>
 </body>

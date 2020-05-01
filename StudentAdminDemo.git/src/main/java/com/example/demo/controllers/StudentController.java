@@ -3,7 +3,6 @@ package com.example.demo.controllers;
 import com.example.demo.models.Student;
 import com.example.demo.repositories.IStudentRepository;
 import com.example.demo.repositories.InMemoryStudentRepositoryImpl;
-import com.example.demo.repositories.StudentRepositoryImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +20,7 @@ public class StudentController {
     }
 
     @GetMapping("/")
-    public String index(Model model)
-    {
+    public String index(Model model) {
         model.addAttribute("students", studentRepository.readAll());
         return "index";
     }
@@ -34,6 +32,7 @@ public class StudentController {
     @ResponseBody
     public String getStudentByParameter(@RequestParam int id) {
         Student stud = studentRepository.read(id);
-        return "The ID is: " + stud.getId()+ " and the cpr is: " + stud.getCpr();
+        return "Name" + stud.getFirstName() + " " + stud.getLastName() + "\nCPR " + stud.getCpr() +
+                "\n" +"ID " + stud.getId();
     }
 }

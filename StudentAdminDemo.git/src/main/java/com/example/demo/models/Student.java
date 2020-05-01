@@ -21,51 +21,18 @@ public class Student
         this.cpr = cpr;
     }
 
-    public void fuckMO(){
-        String fuck;
-        int Mangegange;
-    }
+
     public Student() {}
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getEnrollmentDate() {
-        return enrollmentDate;
-    }
-
-    public void setEnrollmentDate(Date enrollmentDate) {
-        this.enrollmentDate = enrollmentDate;
-    }
-
-    public String getCpr() {
-        return cpr;
-    }
-
-    public void setCpr(String cpr) {
-        this.cpr = cpr;
-    }
+    public int getId()                                      { return id; }
+    public void setId(int id)                               { this.id = id; }
+    public String getFirstName()                            { return firstName;}
+    public void setFirstName(String firstName)              { this.firstName = firstName; }
+    public String getLastName()                             { return lastName; }
+    public void setLastName(String lastName)                { this.lastName = lastName; }
+    public Date getEnrollmentDate()                         { return enrollmentDate; }
+    public void setEnrollmentDate(Date enrollmentDate)      { this.enrollmentDate = enrollmentDate; }
+    public String getCpr()                                  { return cpr; }
+    public void setCpr(String cpr)                          { this.cpr = cpr; }
 
     @Override
     public String toString() {
