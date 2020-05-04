@@ -1,50 +1,104 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+/*--- NAV BAR ---*/
+#navBarLogo{
+    height: 50%;
+    width: 50%;
+}
 
-body {
+body{
+    margin: 0;
+    background: rgb(255, 255, 255);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    left: 50px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.logoPlacement{
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+header                      { background: #000000;}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav                         {float: left;}
+
+nav ul { /*--- Navigation bar start position ---*/
+    margin-left: -65px;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+
+    position: relative;
+}
+
+nav a{ /*--- navigationbar text colour ---*/
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover                 {color: rgba(255, 255, 255, 1);}
+
+nav a::before{ /*--- FX white block ---*/
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #ffffff;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+/*--- FX white block ---*/
+nav a:hover::before         {width: 100%;}
+
+body{/*--- FX white block ---*/
     font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    width: 1024px;
-    margin: 0 auto;
-}
-/*https://www.w3schools.com/TAgs/tag_nav.asp*/
-
-#logo {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.footer {
-    padding-top: 20px;
-    padding-right: 5px;
-    text-align: right;
-    color: #666666;
-    font-style: italic;
-
-}
-
-/* table styles */
+/*--- TABLE STYLES --- */
 /* https://www.w3schools.com/html/html_tables.asp */
+/*https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_border-collapse3*/
+/*https://www.w3schools.com/csS/css_padding.asp*/
 
-table {
-    border-collapse: collapse; /*https://www.w3schools.com/CSSref/tryit.asp?filename=trycss_border-collapse3*/
+table{
+    border-collapse: collapse;
     width: 100%;
 }
 
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 5px 8px 5px 8px; /*https://www.w3schools.com/csS/css_padding.asp*/
+    padding: 5px 8px 5px 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
+tr:nth-child(even)          { background-color: #dddddd;}
 
-input {
+input{
     display: block;
     width: 50%;
     padding: .5rem .75rem;
@@ -58,105 +112,46 @@ input {
     border-radius: .25rem;
 }
 
-/* Buttons */
-.knap{
+/*--- BUTTONS ---*/
+.button{
+    font-family: 'Work Sans', sans-serif;
     padding: 7px;
     font-size: 12px;
     border-radius: 5px;
     border: 0px solid white;
     color: white;
 }
-
-#grøn{
+#createButton{
     background-color: #4CAF50;
+    text-decoration: none;
 }
-#blå{
-    background-color: #008CBA;
-}
-#råd{
-    background-color: #f44336;
-}
-
-/* input fields */
+#detailsButton              {background-color: #4CAF50;}
+#editButton                 {background-color: #008CBA;}
+#deleteButton               {background-color: #f44336;}
 
 
-/* NAV BAR */
-#logo{
-    float: left;
-    height: 50%;
-    width: 50%;
-}
-
-body {
-    margin: 0;
-    background: rgb(255, 255, 255);
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 800;
-}
-
-.container {
-    width: 80%;
+/*--- INPUT FIELDS ---*/
+#signUpForm{
+    display: inline-block;
+    background-color: #dddddd;
+    width: 100%;
     margin: 0 auto;
 }
 
-header {
-    background: #000000;
+.signUpFormBox              {padding: 0.67em;}
+
+.smallerTextHeight{
+    line-height: 0px;
 }
 
-header::after {
-    content: '';
-    display: table;
-    clear: both;
+.footer{
+    line-height: 2px;
+    font-family: 'Work Sans', sans-serif;
+    color: grey;
+    text-align: right;
+    font-size: 10px;
+    font-weight: normal;
+    position: fixed;
+    left: 83%;
+    bottom: 0;
 }
-
-.logo {
-    float: left;
-    padding: 10px 0;
-}
-
-nav {
-    float: left;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 23px;
-
-    position: relative;
-}
-
-nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #ffffff;
-
-    position: absolute;
-    top: 0;
-    width: 0%;
-
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-

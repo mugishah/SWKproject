@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Administration</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- favicon -->
+    <link rel="icon" href="/img/keaBlackLogo.png" type="image" sizes="16x16">
+
+</head>
+<body>
+<!-- HEADER -->
+<header >
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a class="logoPlacement" href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/student/create-student">Student</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/about-us">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- CREATE COURSE FORM -->
+<div class="container">
+    <h1>Create Course</h1>
+    <br>
+    <table>
+        <tr>
+            <label for="name">Name</label>
+            <input id="name" name="firstName" placeholder="Enter name of the course..." type="text" required>
+            <br>
+            <label for="enrollment">Enrollment</label>
+            <input id="enrollment" name="enrollment" type="date" required>
+            <br>
+            <label for="etcs">ETCS</label>
+            <input id="etcs" name="etcs" placeholder="Enter ETCS points..." type="number" required>
+            <br>
+            <label for="description">Description</label>
+            <input id="description" placeholder="Describe the course" type="text" required>
+            <br>
+            <a href="/courses/create-course" class="button" id="createButton">Create</a>
+        </tr>
+
+    </table>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <p>KEA website</p>
+    <p>Mandatory project</p>
+    <p>SWK, sem2 2020©</p>
+</div>
+</body>
+</html>

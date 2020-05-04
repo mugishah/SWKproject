@@ -5,9 +5,7 @@ import com.example.demo.repositories.IStudentRepository;
 import com.example.demo.repositories.InMemoryStudentRepositoryImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class StudentController {
@@ -32,7 +30,27 @@ public class StudentController {
     @ResponseBody
     public String getStudentByParameter(@RequestParam int id) {
         Student stud = studentRepository.read(id);
-        return "Name: " + stud.getFirstName() + " " + stud.getLastName() + "\nCPR: " + stud.getCpr() +
-                "\n" +"ID: " + stud.getId();
+        return "ID " + stud.getId() + "\nName " + stud.getFirstName() + " " + stud.getLastName() +
+                "Enrollment date " + stud.getEnrollmentDate() + "\nCPR " + stud.getCpr();
+    }
+
+    @GetMapping("/student/create-student")
+    public String createStudent(){
+        return "/studentPage/createStudent";
+    }
+
+    @GetMapping("/courses")
+    public String readCourses(){
+        return "/courses/courseHome";
+    }
+
+    @GetMapping("/courses/create-course")
+    public String createCourse(){
+        return "/courses/newCourse";
+    }
+
+    @GetMapping("/about-us")
+    public String readAboutUs(){
+        return "/aboutUsPage/aboutUsPage";
     }
 }
