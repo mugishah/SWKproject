@@ -17,37 +17,13 @@
             <ul>
                 <li><a href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
                 <li><a href="/">Home</a></li>
-                <li><a href="/student/create-student">Student</a></li>
+                <li><a href="/student">Student</a></li>
                 <li><a href="/courses">Courses</a></li>
                 <li><a href="/about-us">About us</a></li>
             </ul>
         </nav>
     </div>
 </header>
-    <!-- Table of students -->
-    <div class="container">
-        <h1>Student administration</h1>
-        <h4>Enrolled students at KEA</h4>
-        <a href="/student/create-student" class="button" id="createButton">Create student</a>
-        <br><br>
-        <table>
-            <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Enrollment</th>
-                <th>Edit</th>
-            </tr>
-            <tr th:each="student : ${students}">
-                <th th:text="${student.firstName}"></th>
-                <th th:text="${student.lastName}"></th>
-                <th th:text="${student.enrollmentDate}"></th>
-                <td><a th:href="@{/student(id=${student.id})}" ><button class="button" id="detailsButton">Details</button></a>
-                    <a th:href="@{/student(id=${student.id})}" ><button class="button" id="editButton">Edit</button></a>
-                    <a th:href="@{/student(id=${student.id})}" ><button class="button" id="deleteButton">Delete</button></a></td>
-            </tr>
-        </table>
-    </div>
-
 
 <!-- footer -->
 <div class="footer">

@@ -18,20 +18,25 @@ public class StudentController {
     }
 
     @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("students", studentRepository.readAll());
+    public String index() {
         return "index";
     }
 
     //Very simple prototype of GET-request with parameter
     //https://www.baeldung.com/spring-request-param
     //TODO Direct to detailed view of student
-    @GetMapping("/student")
+    @GetMapping("/student-detail")
     @ResponseBody
     public String getStudentByParameter(@RequestParam int id) {
         Student stud = studentRepository.read(id);
         return "ID " + stud.getId() + "\nName " + stud.getFirstName() + " " + stud.getLastName() +
                 "Enrollment date " + stud.getEnrollmentDate() + "\nCPR " + stud.getCpr();
+    }
+
+    @GetMapping("/student")
+    public String studentHomePage(Model model){
+        model.addAttribute("students", studentRepository.readAll());
+        return "/studentPage/studentHomePage";
     }
 
     @GetMapping("/student/create-student")
