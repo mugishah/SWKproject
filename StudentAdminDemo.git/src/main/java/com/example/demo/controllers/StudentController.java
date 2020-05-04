@@ -32,7 +32,7 @@ public class StudentController {
     @ResponseBody
     public String getStudentByParameter(@RequestParam int id) {
         Student stud = studentRepository.read(id);
-        return "Name" + stud.getFirstName() + " " + stud.getLastName() + "\nCPR " + stud.getCpr() +
-                "\n" +"ID " + stud.getId();
+        return "Name: " + stud.getFirstName() + " " + stud.getLastName() + "\nCPR: " + stud.getCpr() +
+                "\n" +"ID: " + stud.getId();
     }
 }

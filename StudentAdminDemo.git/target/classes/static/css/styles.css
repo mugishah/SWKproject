@@ -12,7 +12,6 @@ body {
 }
 /*https://www.w3schools.com/TAgs/tag_nav.asp*/
 
-
 #logo {
     font-weight: bold;
     font-size: 1.2em;
@@ -86,7 +85,6 @@ input {
     float: left;
     height: 50%;
     width: 50%;
-
 }
 
 body {
