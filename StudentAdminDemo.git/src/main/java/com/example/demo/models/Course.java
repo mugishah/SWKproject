@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Course {
     private int courseID;
-    private String name;
+    private String courseName;
     private Date enrollment;
     @DateTimeFormat(pattern = "yyyy-MM-dd") // needed for input field on html pages (in order to serve the right format)
     private int etcs;
@@ -14,17 +14,17 @@ public class Course {
 
     public Course(int courseID, String name, Date enrollment, int etcs, String description) {
         this.courseID = courseID;
-        this.name = name;
+        this.courseName = name;
         this.enrollment = enrollment;
         this.etcs = etcs;
         this.description = description;
     }
 
-
+    public Course()                                             {}
     public int getCourseID()                                    { return courseID; }
     public void setCourseID(int courseID)                       {this.courseID = courseID; }
-    public String getName()                                     { return name; }
-    public void setName(String name)                            { this.name = name; }
+    public String getCourseName()                                     { return courseName; }
+    public void setCourseName(String courseName)                            { this.courseName = courseName; }
     public Date getEnrollment()                                 { return enrollment; }
     public void setEnrollment(Date enrollment)                  { this.enrollment = enrollment; }
     public int getEtcs()                                        { return etcs; }
@@ -36,10 +36,11 @@ public class Course {
     public String toString() {
         return "Courses{" +
                 "courseID='" + courseID + '\'' +
-                "name='" + name + '\'' +
+                "name='" + courseName + '\'' +
                 ", enrollment=" + enrollment +
                 ", etcs=" + etcs +
                 ", description='" + description + '\'' +
                 '}';
     }
+
 }

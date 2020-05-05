@@ -1,10 +1,11 @@
 package com.example.demo.repositories;
 
 import com.example.demo.models.Student;
-
 import java.util.List;
 
-public interface IStudentRepository {
+public interface IStudentRepository
+{
+
     // CRUD operations
     public boolean create(Student student);
 

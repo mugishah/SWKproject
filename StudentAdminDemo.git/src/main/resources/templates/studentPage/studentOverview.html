@@ -15,9 +15,9 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
+                <li><a class="logoPlacement" href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
                 <li><a href="/">Home</a></li>
-                <li><a href="/student">Student</a></li>
+                <li><a href="/studentOverview">Student</a></li>
                 <li><a href="/courseOverview">Courses</a></li>
                 <li><a href="/about-us">About us</a></li>
             </ul>
@@ -33,9 +33,20 @@
     <br><br>
     <table>
         <tr>
-            <th>Name</th>
-            <th>Enrollment</th>
-            <th>CPR</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Enrollment Date</th>
+            <th>Edit</th>
+        </tr>
+        <tr th:each="student : ${students}">
+            <th th:text="${student.firstName}"></th>
+            <th th:text="${student.lastName}"></th>
+            <th th:text="${student.enrollmentDate}"></th>
+            <td class="collumnSize">
+                <a th:href="@{/student(id=${student.id})}" ><button class="button" id="detailsButton">Details</button></a>
+                <a th:href="@{/student(id=${student.id})}" ><button class="button" id="editButton">Edit</button></a>
+                <a th:href="@{/student(id=${student.id})}" ><button class="button" id="deleteButton">Delete</button></a>
+            </td>
         </tr>
     </table>
 </div>

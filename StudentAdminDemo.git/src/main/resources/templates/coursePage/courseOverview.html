@@ -33,10 +33,23 @@
     <br><br>
     <table>
         <tr>
+            <th>Course ID</th>
             <th>Course Name</th>
             <th>Enrollment</th>
             <th>Description</th>
             <th>ETCS</th>
+            <th>Edit</th>
+        </tr>
+        <tr th:each="course : ${courses}">
+            <th th:text="${course.courseID}"></th>
+            <th th:text="${course.courseName}"></th>
+            <th th:text="${course.description}"></th>
+            <th th:text="${course.etcs}"></th>
+            <td class="collumnSize">
+                <a th:href="@{/course(id=${course.id})}"><button class="button" id="detailsButton">Details</button></a>
+                <a th:href="@{/course(id=${course.id})}"><button class="button" id="editButton">Edit</button></a>
+                <a th:href="@{/course(id=${course.id})}"><button class="button" id="deleteButton">Delete</button></a>
+            </td>
         </tr>
     </table>
 </div>
