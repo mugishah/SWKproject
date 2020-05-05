@@ -5,46 +5,31 @@
     <title>Student Administration</title>
     <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- favicon -->
+    <link rel="icon" href="/img/keaBlackLogo.png" type="image" sizes="16x16">
+
 </head>
 <body>
-    <!-- TODO: MENU -->
-    <header>
-        <div class="container">
-            <h1 class="logo"></h1>
-
-            <nav>
-                <ul>
-                    <li><a href="/"><img id="logo" src="/img/kea.png"></a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Student</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">About us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- TODO: Table of students -->
+<!-- HEADER -->
+<header>
     <div class="container">
-        <h1>Student administration</h1>
-
-        <table>
-            <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Enrollment</th>
-                <th>Edit</th>
-            </tr>
-            <tr th:each="student : ${students}">
-
-                <th th:text="${student.firstName}"></th>
-                <th th:text="${student.lastName}"></th>
-                <th th:text="${student.enrollmentDate}"></th>
-                <td><a th:href="@{/student(id=${student.id})}" ><button class="knap" id="grøn">Details</button></a>
-                    <a th:href="@{/student(id=${student.id})}" ><button class="knap" id="blå">Edit</button></a>
-                    <a th:href="@{/student(id=${student.id})}" ><button class="knap" id="råd">Delete</button></a></td>
-            </tr>
-
-        </table>
+        <nav>
+            <ul>
+                <li><a href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/student">Student</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/about-us">About us</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
+
+<!-- footer -->
+<div class="footer">
+    <p>KEA website</p>
+    <p>Mandatory project</p>
+    <p>SWK, sem2 2020©</p>
+</div>
 </body>
 </html>

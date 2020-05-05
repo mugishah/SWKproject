@@ -5,19 +5,24 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 public class Courses {
+    private int courseID;
     private String name;
     private Date enrollment;
     @DateTimeFormat(pattern = "yyyy-MM-dd") // needed for input field on html pages (in order to serve the right format)
     private int etcs;
     private String description;
 
-    public Courses(String name, Date enrollment, int etcs, String description) {
+    public Courses(int courseID, String name, Date enrollment, int etcs, String description) {
+        this.courseID = courseID;
         this.name = name;
         this.enrollment = enrollment;
         this.etcs = etcs;
         this.description = description;
     }
 
+
+    public int getCourseID()                                    { return courseID; }
+    public void setCourseID(int courseID)                       {this.courseID = courseID; }
     public String getName()                                     { return name; }
     public void setName(String name)                            { this.name = name; }
     public Date getEnrollment()                                 { return enrollment; }
@@ -30,6 +35,7 @@ public class Courses {
     @Override
     public String toString() {
         return "Courses{" +
+                "courseID='" + courseID + '\'' +
                 "name='" + name + '\'' +
                 ", enrollment=" + enrollment +
                 ", etcs=" + etcs +

@@ -44,14 +44,14 @@ public class StudentController {
         return "/studentPage/createStudent";
     }
 
-    @GetMapping("/courses")
+    @GetMapping("/courseOverview")
     public String readCourses(){
-        return "/courses/courseHome";
+        return "/coursePage/courseOverview";
     }
 
-    @GetMapping("/courses/create-course")
+    @GetMapping("/coursePage/createCourse")
     public String createCourse(){
-        return "/courses/newCourse";
+        return "/coursePage/createCourses";
     }
 
     @GetMapping("/about-us")
