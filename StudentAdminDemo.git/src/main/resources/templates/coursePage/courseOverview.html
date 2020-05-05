@@ -11,11 +11,11 @@
 </head>
 <body>
 <!-- HEADER -->
-<header>
+<header >
     <div class="container">
         <nav>
             <ul>
-                <li><a href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
+                <li><a class="logoPlacement" href="/"><img id="navBarLogo" src="/img/keaWhiteLogo.png"></a></li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/studentOverview">Student</a></li>
                 <li><a href="/courseOverview">Courses</a></li>
@@ -25,7 +25,22 @@
     </div>
 </header>
 
-<h1>Welcome to KEA</h1>
+<!-- Table of courses -->
+<div class="container">
+    <h1>Welcome to Course Adminstration</h1>
+    <h4>Courses we offer at KEA</h4>
+    <a href="/createCourse" class="button" id="createButton">Add courses</a>
+    <br><br>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Enrollment</th>
+            <th>Description</th>
+            <th>ETCS</th>
+        </tr>
+    </table>
+</div>
+
 <!-- footer -->
 <div class="footer">
     <p>KEA website</p>

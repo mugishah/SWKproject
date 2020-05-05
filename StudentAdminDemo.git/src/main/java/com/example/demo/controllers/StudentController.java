@@ -33,13 +33,13 @@ public class StudentController {
                 "Enrollment date " + stud.getEnrollmentDate() + "\nCPR " + stud.getCpr();
     }
 
-    @GetMapping("/student")
+    @GetMapping("/studentOverview")
     public String studentHomePage(Model model){
         model.addAttribute("students", studentRepository.readAll());
-        return "/studentPage/studentHomePage";
+        return "/studentPage/studentOverview";
     }
 
-    @GetMapping("/student/create-student")
+    @GetMapping("/createStudent")
     public String createStudent(){
         return "/studentPage/createStudent";
     }
@@ -49,9 +49,9 @@ public class StudentController {
         return "/coursePage/courseOverview";
     }
 
-    @GetMapping("/coursePage/createCourse")
+    @GetMapping("/createCourse")
     public String createCourse(){
-        return "/coursePage/createCourses";
+        return "/coursePage/createCourse";
     }
 
     @GetMapping("/about-us")

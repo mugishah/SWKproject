@@ -4,7 +4,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-public class Courses {
+public class Course {
     private int courseID;
     private String name;
     private Date enrollment;
@@ -12,7 +12,7 @@ public class Courses {
     private int etcs;
     private String description;
 
-    public Courses(int courseID, String name, Date enrollment, int etcs, String description) {
+    public Course(int courseID, String name, Date enrollment, int etcs, String description) {
         this.courseID = courseID;
         this.name = name;
         this.enrollment = enrollment;
